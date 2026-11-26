@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUN HUB | Cheats</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+        
+        body {
+            background-color: #080808;
+            background-image: radial-gradient(circle at 50% -20%, #001a2a 0%, #080808 60%);
+            color: #fff;
+            min-height: 100vh;
+            padding-bottom: 50px;
+        }
+
+        /* Шапка */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 150, 255, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, #0099ff, #00ffcc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .status-badge {
+            font-size: 12px;
+            background: rgba(0, 255, 136, 0.1);
+            color: #00ff88;
+            padding: 5px 12px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            font-weight: 600;
+        }
+
+        /* Главный контент */
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        .page-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .page-subtitle {
+            text-align: center;
+            color: #888;
+            font-size: 16px;
+            margin-bottom: 50px;
+        }
+
+        /* Сетка карточек */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* Карточка */
+        .card {
+            background: #111;
+            border: 1px solid #222;
+            border-radius: 16px;
+            padding: 30px;
+            position: relative;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover {
+            border-color: rgba(0, 150, 255, 0.5);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5), 0 0 20px rgba(0, 150, 255, 0.1);
+        }
+
+        /* Бейджи */
+        .badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .badge-undetected { background: rgba(0, 255, 136, 0.15); color: #00ff88; border: 1px solid #00ff88; }
+        .badge-soon { background: rgba(255, 170, 0, 0.15); color: #ffaa00; border: 1px solid #ffaa00; }
+
+        .card-title {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 5px;
+            color: #fff;
+        }
+        .card-version {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* Список функций */
+        .features {
+            list-style: none;
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+        .features li {
+            font-size: 14px;
+            color: #aaa;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .features li::before {
+            content: '✓';
+            color: #0099ff;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        /* Кнопки */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+            border-radius: 10px;
+            font-weight: 800;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-download {
+            background: #00ff88;
+            color: #000;
+            box-shadow: 0 5px 15px rgba(0, 255, 136, 0.2);
+        }
+        .btn-download:hover {
+            background: #00cc66;
+            box-shadow: 0 8px 25px rgba(0, 255, 136, 0.4);
+            transform: translateY(-2px);
+        }
+        .btn-disabled {
+            background: #1a1a1a;
+            color: #555;
+            cursor: not-allowed;
+            border: 1px solid #333;
+        }
+
+        /* Футер */
+        footer {
+            text-align: center;
+            color: #444;
+            font-size: 12px;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">FUN HUB</div>
+    <div class="status-badge">● ONLINE</div>
+</header>
+
+<div class="container">
+    <h1 class="page-title">Наши Читы</h1>
+    <p class="page-subtitle">Выберите модификацию для загрузки.</p>
+
+    <div class="grid">
+        
+        <!-- КАРТОЧКА 1: FOCUS (СКАЧИВАНИЕ ZIP) -->
+        <div class="card">
+            <div class="badge badge-undetected">Undetected</div>
+            <div class="card-title">Focus</div>
+            <div class="card-version">v2.0.1 | Latest Update</div>
+            <ul class="features">
+                <li>Aimbot (Rage / Legit)</li>
+                <li>ESP / Wallhack</li>
+                <li>Silent Aim</li>
+                <li>No Recoil & No Spread</li>
+            </ul>
+            <!-- ССЫЛКА ТЕПЕРЬ НА ZIP -->
+            <a href="focus.zip" download class="btn btn-download">Скачать Focus</a>
+        </div>
+
+        <!-- КАРТОЧКА 2: СКОРО -->
+        <div class="card">
+            <div class="badge badge-soon">Скоро</div>
+            <div class="card-title">Phantom Menu</div>
+            <div class="card-version">In Development</div>
+            <ul class="features">
+                <li>Full ESP Customization</li>
+                <li>Fly Mode & Noclip</li>
+                <li>Speed Hack</li>
+                <li>Infinite Stamina</li>
+            </ul>
+            <button class="btn btn-disabled" disabled>Ожидайте релиза</button>
+        </div>
+
+        <!-- КАРТОЧКА 3: СКОРО -->
+        <div class="card">
+            <div class="badge badge-soon">Скоро</div>
+            <div class="card-title">Vortex Loader</div>
+            <div class="card-version">Closed Beta</div>
+            <ul class="features">
+                <li>Custom Spoofer</li>
+                <li>HWID Changer</li>
+                <li>Anti-Screenshot</li>
+                <li>Cloud Configs</li>
+            </ul>
+            <button class="btn btn-disabled" disabled>Ожидайте релиза</button>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    &copy; 2026 FUN HUB. We are not responsible for your bans.
+</footer>
+
+</body>
+</html>
